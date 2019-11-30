@@ -8,10 +8,10 @@ class RotaSchema extends Schema {
     this.create('rotas', (table) => {
       table.increments()
       table
-        .integer('user_id')
+        .string('user_email')
         .unsigned()
         .notNullable()
-        .references('id')
+        .references('email')
         .inTable('users')
         .onUpdate('CASCADE')
         .onDelete('CASCADE')
@@ -19,6 +19,8 @@ class RotaSchema extends Schema {
       table.string('data', 12).notNullable()
       table.string('hora', 6).notNullable()
       table.string('duracao', 6).notNullable()
+      table.string('cidade', 60).notNullable()
+      table.string('estado', 60).notNullable()
       table.string('avaliacao', 2).notNullable() 
       table.float('qtdturistas', 5).notNullable()
       table.string('personalidade', 40).notNullable()

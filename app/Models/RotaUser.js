@@ -3,8 +3,7 @@
 /** @type {typeof import('@adonisjs/lucid/src/Lucid/Model')} */
 const Model = use('Model')
 
-class Rota extends Model {
-
+class RotaUser extends Model {
 }
 
-module.exports = Rota
+module.exports = RotaUser

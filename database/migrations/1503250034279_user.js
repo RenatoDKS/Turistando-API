@@ -7,7 +7,8 @@ class UserSchema extends Schema {
   up () {
     this.create('users', (table) => {
       table.increments()
-      table.string('username', 80).notNullable().unique()
+      table.string('name', 80).notNullable()
+      table.string('lastName', 80).notNullable()
       table.string('email', 254).notNullable().unique()
       table.string('password', 60).notNullable()
       table.string('telefone', 14).notNullable()
@@ -20,6 +21,8 @@ class UserSchema extends Schema {
       table.float('avaliacao', 5)
       table.string('bio', 254)
       table.string('idade', 3).notNullable()
+      table.string('cpf', 20)
+      table.string('cnpj', 20)
       table.timestamps()
     })
   }
