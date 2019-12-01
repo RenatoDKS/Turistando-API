@@ -5,7 +5,7 @@ const Schema = use('Schema')
 
 class RotaSchema extends Schema {
   up () {
-    this.create('rotas', (table) => {
+    this.create('rota', (table) => {
       table.increments()
       table
         .string('user_email')
