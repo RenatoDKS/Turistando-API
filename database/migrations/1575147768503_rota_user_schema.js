@@ -5,7 +5,7 @@ const Schema = use('Schema')
 
 class RotaUserSchema extends Schema {
   up () {
-    this.create('rota_users', (table) => {
+    this.create('rota_user', (table) => {
       table.increments()
       table.integer('user_id').notNullable()
       table.integer('rota_id').notNullable()
