@@ -33,6 +33,4 @@ Route.post('/listaRota/:id', 'RotaUserController.listaRotas').middleware(['auth'
 Route.post('/cadastraTurista/:id', 'RotaUserController.store').middleware(['auth']);
 Route.delete('/deletarCadastro/:id', 'RotaUserController.deletarCadastro').middleware(['auth']);
 
-Route.get('/') {
-  return 'EAE CLAUDIO KKK'
-  })
+Route.get('/', () => 'EAE CLAUDIO KKK')
