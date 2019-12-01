@@ -32,3 +32,7 @@ Route.get('/listaUsuario', 'RotaUserController.listaUsuario').middleware(['auth'
 Route.post('/listaRota/:id', 'RotaUserController.listaRotas').middleware(['auth']);
 Route.post('/cadastraTurista/:id', 'RotaUserController.store').middleware(['auth']);
 Route.delete('/deletarCadastro/:id', 'RotaUserController.deletarCadastro').middleware(['auth']);
+
+Route.get('/', ({request}) -> {
+  return { greeting: 'Eae Claudio kkk' }
+  })
