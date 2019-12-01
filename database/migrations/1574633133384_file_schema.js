@@ -5,7 +5,7 @@ const Schema = use('Schema')
 
 class FileSchema extends Schema {
   up () {
-    this.create('file', (table) => {
+    this.create('files', (table) => {
       table.increments()
       table
         .integer('rota_id')
