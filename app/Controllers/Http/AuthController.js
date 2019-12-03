@@ -6,7 +6,7 @@ const Hash = use('Hash')
 const Database = use('Database')
 
 class AuthController {
-  async register({ request }){
+  async register({ request, response }){
    const data = request.only([
      'name',
      'lastName',
