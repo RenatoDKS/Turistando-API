@@ -26,10 +26,6 @@ class AuthController {
      'cnpj'
     ]);
     
-    const verificaEmail = await Database.from('users').where('email', data.email)
-    if(verificaEmail){
-      return response.status(500).json({ status: "erro", message: "Email já cadastrado"}) ;
-    }
 
     const user = await User.create(data);
     
