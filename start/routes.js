@@ -23,7 +23,7 @@ Route.get('/index', 'AuthController.index').middleware(['auth']);
 Route.get('/showUserByEmail/:id', 'AuthController.showUserByEmail').middleware(['auth']);
 Route.get('/showUserByTipo/:id', 'AuthController.showUserByTipo').middleware(['auth']);
 Route.get('/showUserByUsername/:id', 'AuthController.showUserByUsername').middleware(['auth']);
-Route.delete('/delete/:id', 'AuthController.delete').middleware(['auth']);
+Route.delete('/delete/:id', 'AuthController.delete');
 Route.resource('/files', 'FileController');
 Route.resource('rotas', 'RotaController').apiOnly().middleware('auth');
 
