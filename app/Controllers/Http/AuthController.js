@@ -39,7 +39,7 @@ class AuthController {
 
   }
 
-  async update({ params, request, response, auth }){
+  async update({ params, request, response }){
     const user = await User.findOrFail(params.id);
 
     
