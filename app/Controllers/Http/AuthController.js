@@ -112,7 +112,7 @@ async showUserByUsername({ params, response }){
   }
 }
 
-async delete({ params, response, auth }){
+async delete({ params, response }){
   const user = await User.findOrFail(params.id);
 
   
