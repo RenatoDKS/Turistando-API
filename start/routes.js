@@ -19,10 +19,10 @@ const Route = use('Route')
 Route.post('/register', 'AuthController.register');
 Route.post('/authenticate', 'AuthController.authenticate');
 Route.put('/update/:id', 'AuthController.update');
-Route.get('/index', 'AuthController.index').middleware(['auth']);
-Route.get('/showUserByEmail/:id', 'AuthController.showUserByEmail').middleware(['auth']);
-Route.get('/showUserByTipo/:id', 'AuthController.showUserByTipo').middleware(['auth']);
-Route.get('/showUserByUsername/:id', 'AuthController.showUserByUsername').middleware(['auth']);
+Route.get('/index', 'AuthController.index');
+Route.get('/showUserByEmail/:id', 'AuthController.showUserByEmail');
+Route.get('/showUserByTipo/:id', 'AuthController.showUserByTipo');
+Route.get('/showUserByUsername/:id', 'AuthController.showUserByUsername');
 Route.delete('/delete/:id', 'AuthController.delete');
 Route.resource('/files', 'FileController');
 Route.resource('rotas', 'RotaController').apiOnly().middleware('auth');
