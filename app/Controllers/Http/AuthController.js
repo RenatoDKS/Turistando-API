@@ -115,19 +115,10 @@ async showUserByUsername({ params, response }){
 async delete({ params, response, auth }){
   const user = await User.findOrFail(params.id);
 
-  if(auth.user.id == params.id){
+  
     await user.delete()
-    return response.status(200).json({
-      status: 'Ok',
-      message: 'Usuário deletado com sucesso'
-    })
-  }else{
-    return response.status(401).json({
-      status: 'error',
-      message: 'Você não pode deletar outro usuário'
-    })
-   }
-}
+
+  }
 
 }
      
