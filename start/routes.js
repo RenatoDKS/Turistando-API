@@ -18,7 +18,7 @@ const Route = use('Route')
 
 Route.post('/register', 'AuthController.register');
 Route.post('/authenticate', 'AuthController.authenticate');
-Route.put('/update/:id', 'AuthController.update').middleware(['auth']);
+Route.put('/update/:id', 'AuthController.update');
 Route.get('/index', 'AuthController.index').middleware(['auth']);
 Route.get('/showUserByEmail/:id', 'AuthController.showUserByEmail').middleware(['auth']);
 Route.get('/showUserByTipo/:id', 'AuthController.showUserByTipo').middleware(['auth']);
