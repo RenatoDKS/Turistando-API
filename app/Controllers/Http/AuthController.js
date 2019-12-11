@@ -42,7 +42,7 @@ class AuthController {
   async update({ params, request, response, auth }){
     const user = await User.findOrFail(params.id);
 
-    if(auth.user.id == params.id){
+    
 
     const data = request.only([
       'name',
@@ -68,14 +68,7 @@ class AuthController {
     await user.save();
 
     return user;
-    }
-
-    else{
-     return response.status(401).json({
-       status: 'error',
-       message: 'Você não pode alterar dados de outro usuário'
-     })
-    }
+  
   }
 
 async index(){
