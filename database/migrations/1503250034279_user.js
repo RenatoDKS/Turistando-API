@@ -23,6 +23,7 @@ class UserSchema extends Schema {
       table.string('idade', 3).notNullable()
       table.string('cpf', 20)
       table.string('cnpj', 20)
+      table.string('contaBancaria', 40)
       table.timestamps()
     })
   }
